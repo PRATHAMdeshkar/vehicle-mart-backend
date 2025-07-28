@@ -2,6 +2,8 @@ package com.tech.vehicle.dto;
 
 import lombok.Data;
 
+import java.math.BigDecimal;
+
 @Data
 public class VehicleUploadRequest {
     public Long getSellerId() {
@@ -40,7 +42,11 @@ public class VehicleUploadRequest {
         return numberOfOwners;
     }
 
+    public BigDecimal getPrice() {
+        return price;}
+
     private Long sellerId;
+    private BigDecimal price;
     private String brand;
     private String model;
     private Integer year;

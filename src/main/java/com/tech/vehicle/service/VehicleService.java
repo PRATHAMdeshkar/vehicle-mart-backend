@@ -33,6 +33,7 @@ public class VehicleService {
         vehicle.setVehicleType(req.getVehicleType());
         vehicle.setMileage(req.getMileage());
         vehicle.setNumberOfOwners(req.getNumberOfOwners());
+        vehicle.setPrice(req.getPrice());
         vehicle.setSeller(seller);
 
         vehicleRepository.save(vehicle);
