@@ -5,6 +5,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.math.BigDecimal;
+import java.math.BigInteger;
+
 @Entity
 @Getter
 @Setter
@@ -15,6 +18,10 @@ public class Vehicle {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String brand;
+    private BigDecimal price;
+
+    public BigDecimal getPrice() {return price;}
+    public void setPrice(BigDecimal price) {this.price = price;}
 
     public Long getId() {
         return id;
